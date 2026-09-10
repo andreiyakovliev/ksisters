@@ -4,7 +4,7 @@
 
 ## 🔗 Посилання
 * **Live Demo:** https://ksisters-beryl.vercel.app/
-* **Figma макет:** https://www.figma.com/design/XWZfQPQZNaPhw3htaiA5hV/%D0%9C%D0%B0%D0%BA%D0%B5%D1%82-%D0%B4%D0%BB%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE?node-id=0-1&p=f&t=KRpvGDaMGk1fbdgE-0&utm_source=chatgpt.com
+* **Figma макет:** [https://www.figma.com/design/XWZfQPQZNaPhw3htaiA5hV](https://www.figma.com)
 
 ---
 
