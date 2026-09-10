@@ -3,7 +3,7 @@
 Лендінг картки товару з трьома блоками, анімаціями та інтерактивними елементами. Виконано відповідно до макету Figma з використанням React та Vite.
 
 ## 🔗 Посилання
-* **Live Demo:** https://ksisters-beryl.vercel.app/
+* **Live Demo:** [ksisters.vercel.app/](https://ksisters-zeta.vercel.app/)
 * **Figma макет:** [https://www.figma.com](https://www.figma.com/design/XWZfQPQZNaPhw3htaiA5hV)
 
 ---
@@ -48,10 +48,11 @@
 ## 🚀 Інструкція із запуску проєкту
 
 1. **Клонувати репозиторій:**
-   git clone [https://github.com/andreiyakovliev/ksisters.git](https://github.com/andreiyakovliev/ksisters.git)
+
+git clone [https://github.com/andreiyakovliev/ksisters.git](https://github.com/andreiyakovliev/ksisters.git)
    cd ksisters
 
-2. **Встановити залежності:**
+3. **Встановити залежності:**
 
 npm install
 
