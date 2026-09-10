@@ -3,8 +3,8 @@
 Лендінг картки товару з трьома блоками, анімаціями та інтерактивними елементами. Виконано відповідно до макету Figma з використанням React та Vite.
 
 ## 🔗 Посилання
-* **Live Demo:** https://ksisters-beryl.vercel.app/
-* **Figma макет:** https://www.figma.com/design/XWZfQPQZNaPhw3htaiA5hV/%D0%9C%D0%B0%D0%BA%D0%B5%D1%82-%D0%B4%D0%BB%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE?node-id=0-1&p=f&t=KRpvGDaMGk1fbdgE-0&utm_source=chatgpt.com
+* **Live Demo:** [ksisters.vercel.app/](https://ksisters-zeta.vercel.app/)
+* **Figma макет:** [https://www.figma.com](https://www.figma.com/design/XWZfQPQZNaPhw3htaiA5hV)
 
 ---
 
@@ -29,11 +29,11 @@
 
 ## 🛠️ Використані технології & Верстка
 
-* **React 19 & Vite 8** — швидка збірка та сучасний стек.
-* **SCSS & CSS Modules** — модульна стилізація без конфліктів глобальних класів.
-* **CSS Grid / Flexbox** — у 2-му блоці використано `grid`, у 3-му — `flex`. Для демонстрації впевненої роботи з обома інструментами.
-* **Fluid Responsive Design** — адаптивність реалізована через гумові функції `clamp()`, `rem()` та `fluid()`. При зміні ширини екрана тексти, відступи та розміри елементів пропорційно й плавно масштабуються.
-* **Custom React Hooks** — ізольована логіка для скрол-спостерігача (`useScrollObserver`), паралаксу та слайдера.
+* **React 19 & Vite 8**: швидка збірка та сучасний стек.
+* **SCSS & CSS Modules**: модульна стилізація без конфліктів глобальних класів.
+* **CSS Grid / Flexbox**: у 2-му блоці використано `grid`, у 3-му — `flex`. Для демонстрації впевненої роботи з обома інструментами.
+* **Fluid Responsive Design**: адаптивність реалізована через гумові функції `clamp()`, `rem()` та `fluid()`. При зміні ширини екрана тексти, відступи та розміри елементів пропорційно й плавно масштабуються.
+* **Custom React Hooks**: ізольована логіка для скрол-спостерігача (`useScrollObserver`), паралаксу та слайдера.
 
 ---
 
@@ -48,10 +48,11 @@
 ## 🚀 Інструкція із запуску проєкту
 
 1. **Клонувати репозиторій:**
-   git clone [https://github.com/andreiyakovliev/ksisters.git](https://github.com/andreiyakovliev/ksisters.git)
+
+git clone [https://github.com/andreiyakovliev/ksisters.git](https://github.com/andreiyakovliev/ksisters.git)
    cd ksisters
 
-2. **Встановити залежності:**
+3. **Встановити залежності:**
 
 npm install
 
