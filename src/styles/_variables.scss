@@ -1,0 +1,32 @@
+// Typography
+$font-family-base: "Inter", sans-serif;
+$font-family-accent: "Gilroy", sans-serif;
+$font-size-base: 17;
+
+// Colors: Brand & System
+$color-main: #5D5D5D;
+$color-primary: #6F7D64;
+$color-primary-alpha: rgba(111, 125, 100, 0.3);
+$color-primary-border: #6F7D644D;
+
+$color-dark: #2C2416;
+$color-border: #E8D5C4;
+
+$color-bg-light: #FAF8F5;
+$color-bg-muted: #D4D8D1;
+$color-bg-gradient-end: #D9E7DD;
+
+$color-black: #000;
+$color-white: #fff;
+$color-icon: #99A1AF;
+
+// Sizes
+$min-width-container: 375;
+$max-width-container: 1170;
+$container-padding: 15;
+
+// Ширина контейнера
+$container-width: $max-width-container + $container-padding;
+
+// Breakpoints
+$breakpoint-mobile: 767.98px;

@@ -1,0 +1,110 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/functions' as *;
+@use '../../../styles/global.scss' as *;
+
+// Секція Relax
+.relax {
+  position: relative;
+  background: 
+    url('@img/hero/pattern.png') 0 0 / cover repeat,
+    linear-gradient(180deg, #FFFFFF 0%, #D9E7DD 100%);
+  background-position: center center, 0 0;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  .container {
+  }
+
+  .wrapper {
+    padding-top: fluid(17.5, 56);
+    padding-bottom: fluid(48, 133);
+    padding-right: fluid(6.41, 58);
+    padding-left: fluid(1, 85);
+  }
+
+  .title {
+    font-family: Inter;
+    font-weight: 700;
+    text-align: center;
+    color: #2C2416;
+    z-index: 1;
+
+    font-size: fluid(20, 48);
+    line-height: fluid(20, 60);
+    letter-spacing: fluid(0.11, 0.35);
+
+    margin-right: fluid(23, 26);
+    margin-bottom: fluid(11, 39);
+    margin-left: fluid(33, 58);
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    gap: fluid(35, 72);
+  }
+
+  .media {
+    position: relative;
+    width: 29%;
+  }
+
+  .mediaSecondary {
+    position: absolute;
+    bottom: -22.87%;
+    right: -49.46%;
+
+    max-width: fluid(80, 228);
+    max-height: fluid(78, 226);
+  }
+
+  .logo {
+    position: absolute;
+    left: 4.32%;
+    bottom: 6.78%;
+    z-index: 100;
+
+    width: fluid(38.8, 108.5);
+  }
+
+  .content {
+    width: 71%;
+    background: #FFFFFF;
+    box-shadow: 0px rem(25) rem(50) rem(-12) #00000040;
+
+    margin-bottom: fluid(32, 12);
+    border-radius: fluid(11.25, 36);
+    border: fluid(0.62, 2) solid #E8D5C4;
+    padding: fluid(15.63, 50);
+  }
+
+  .text {
+    text-align: center;
+
+    font-size: fluid(10, 20);
+    line-height: fluid(10, 34);
+    letter-spacing: fluid(-0.14, -0.45);
+  }
+}
+
+// Секція Decor
+.decor {
+  @extend %decor;
+
+  %itemBase {
+    position: absolute;
+  }
+
+  .itemEleven {
+    @extend %itemBase;
+    z-index: 7;
+
+    width: fluid(101, 215);
+    height: fluid(66, 140);
+    bottom: fluid(10, 48);
+    right: fluid(-5, -8);
+  }
+}

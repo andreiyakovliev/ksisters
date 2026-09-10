@@ -1,0 +1,37 @@
+@use "sass:math";
+@use "./variables" as *;
+@use 'sass:meta';
+@use 'sass:list';
+
+@function strip-unit($number) {
+  @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function rem($px) {
+  @return math.div(strip-unit($px), strip-unit($font-size-base)) * 1rem;
+}
+
+// Адаптивний clamp
+
+@function fluid($min, $max, $min-vw: $min-width-container, $max-vw: $container-width) {
+  $min: strip-unit($min);
+  $max: strip-unit($max);
+  $min-vw: strip-unit($min-vw);
+  $max-vw: strip-unit($max-vw);
+
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $value: calc(#{$min}px + #{$slope} * (100vw - #{$min-vw}px));
+
+  $clamp-min: $min;
+  $clamp-max: $max;
+
+  @if $min > $max {
+    $clamp-min: $max;
+    $clamp-max: $min;
+  }
+
+  @return clamp(#{$clamp-min}px, #{$value}, #{$clamp-max}px);
+}

@@ -1,0 +1,356 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/functions' as *;
+@use '../../../styles/global.scss' as *;
+
+// Анімації
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(rem(-120));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Загальні data-атрибути
+
+
+// Секція Hero
+.hero {
+  position: relative;
+  background: url('@img/hero/01.png') left top / cover no-repeat;
+
+  @media (max-width: $breakpoint-mobile) {
+    background-position: center bottom;
+    background-size: 100% auto;
+  }
+
+  .container {
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    width: 100%;
+    gap: rem(13);
+
+    padding-top: fluid(0.01, 41);
+    padding-inline: fluid(2, 30);
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: start;
+    position: relative;
+    width: 51%;
+    backdrop-filter: blur(rem(10));
+    -webkit-backdrop-filter: blur(rem(10));
+    background-color: rgb(255 255 255 / 20%);
+    z-index: 5;
+
+    border: rem(1) solid #6F7D644D;
+    border-radius: 0 0 rem(20) rem(20);
+    box-shadow: 
+      0px rem(4) rem(6) rem(-4) #0000001A,
+      0px rem(10) rem(15) rem(-3) #0000001A;
+
+    opacity: 0;
+    animation: slideInLeft 0.8s ease 0.1s forwards;
+
+    margin-top: fluid(-0.01, -41);
+    margin-bottom: fluid(144, 193);
+    gap: fluid(20, 16);
+    padding-top: fluid(41, 129);
+    padding-left: fluid(0, 40);
+    padding-bottom: fluid(0, 33);
+    padding-right: fluid(0, 40);
+
+    :global(.loaded) & {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      backdrop-filter: none;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(16);
+
+    color: #6F7D64;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: rem(1) solid rgba(111, 125, 100, 0.3);
+    border-radius: rem(20);
+    box-shadow: 
+      0 rem(10) rem(15) rem(-3) rgb(0 0 0 / 10%),
+      0 rem(4) rem(6) rem(-4) rgb(0 0 0 / 10%);
+
+    font-size: fluid(10.8, 14);
+    line-height: fluid(11.57, 15);
+    letter-spacing: fluid(1.63, 2.12);
+    padding-top: fluid(7, 9);
+    padding-bottom: fluid(7, 9);
+    padding-inline: fluid(16, 21);
+
+    &::before {
+      content: '';
+      display: block;
+      width: rem(6);
+      height: rem(6);
+      margin-bottom: rem(2);
+      background-color: #6F7D64;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-weight: 600;
+      line-height: rem(11.57);
+      letter-spacing: rem(1.63);
+      gap: rem(6);
+    }
+  }
+
+  .title {
+    color: #000;
+    font-weight: 900;
+
+    font-size: fluid(20, 40);
+    line-height: fluid(25, 50);
+    letter-spacing: fluid(0.4, -0.97);
+
+    @media (max-width: $breakpoint-mobile) {
+      font-weight: 500;
+    }
+  }
+
+  .desc {
+    color: #000;
+
+    font-size: fluid(12.5, 18);
+    line-height: fluid(18, 28.8);
+    letter-spacing: fluid(-0.15, -0.44);
+  }
+
+  .btn {
+    font-family: 'Gilroy', serif;
+    font-weight: 600;
+    font-size: rem(19);
+    text-transform: uppercase;
+    line-height: rem(19);
+    letter-spacing: rem(1.5);
+    color: #fff;
+    white-space: nowrap;
+
+    padding-top: rem(19.5);
+    padding-bottom: rem(19.5);
+    background-color: #000;
+    border: rem(1) solid #000;
+    border-radius: rem(30);
+    align-self: center;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: #000;
+      background-color: #FAF8F5;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+
+    padding-inline: fluid(39, 123.5);
+  }
+
+  .media {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 49%;
+
+    max-width: fluid(145, 420);
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      margin-left: rem(145);
+    }
+  }
+
+  .imgPrimary {
+    position: absolute;
+    width: 77.38%;
+    height: auto;
+    bottom: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 7;
+    opacity: 0;
+    animation: appearance 2s ease 0.3s forwards;
+  }
+
+  .imgSecondary {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: -7%;
+    left: 0;
+  }
+
+  .imgDecor {
+    position: absolute;
+    z-index: 6;
+
+    width: fluid(64, 201);
+    height: fluid(54, 171);
+    bottom: fluid(102, 164);
+    left: fluid(-24, -75);
+
+    @media (max-width: $breakpoint-mobile) {
+      z-index: 7;
+    }
+  }
+
+  .line {
+    position: absolute;
+    bottom: -0.1%;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+// Секція Decor
+.decor {
+  @extend %decor;
+
+  %itemBase {
+    position: absolute;
+  }
+
+  .itemOne {
+    @extend %itemBase;
+    width: fluid(26, 82);
+    height: fluid(26, 82);
+    top: fluid(228, 42);
+    right: fluid(72, 231);
+  }
+
+  .itemTwo {
+    @extend %itemBase;
+    width: fluid(28, 87);
+    height: fluid(28, 87);
+    top: fluid(257, 134);
+    right: fluid(49, 156);
+  }
+
+  .itemThree {
+    @extend %itemBase;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+
+    width: fluid(66, 206);
+    height: fluid(66, 206);
+    bottom: fluid(10, 37);
+    left: fluid(49, 159);
+
+    > img {
+      grid-area: 1 / 1;
+    }
+
+    > img:first-child {
+      object-fit: contain;
+      width: fluid(66, 206);
+      height: fluid(66, 206);
+    }
+
+    .itemLogo {
+      z-index: 5;
+    }
+  }
+
+  .itemFour {
+    @extend %itemBase;
+    z-index: 4;
+
+    width: fluid(57, 185);
+    height: fluid(57, 185);
+    bottom: fluid(-11, -50);
+    left: fluid(142, 446);
+  }
+
+  .itemFive {
+    @extend %itemBase;
+    z-index: 4;
+
+    width: fluid(25, 79);
+    height: fluid(25, 79);
+    bottom: fluid(-10, -28);
+    left: fluid(99, 324);
+  }
+
+  .itemSeven {
+    @extend %itemBase;
+    z-index: 4;
+
+    width: fluid(68, 215);
+    height: fluid(44, 139);
+    bottom: fluid(17, 49);
+    right: fluid(-1, -8);
+
+    @media (max-width: $breakpoint-mobile) {
+      z-index: 3;
+    }
+  }
+
+  .itemEight {
+    @extend %itemBase;
+    z-index: 7;
+
+    width: fluid(105, 263);
+    height: fluid(116, 186);
+    top: fluid(-29, -4);
+    left: fluid(6, -25.42);
+
+    @media (max-width: $breakpoint-mobile) {
+      z-index: 1;
+      transform: rotate(-95.44deg);
+      transition: transform 0.3s ease;
+    }
+  }
+}
