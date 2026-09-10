@@ -1,6 +1,7 @@
 import styles from './ProductHero.module.scss';
 import { HERO_CONTENT } from '../../../data/content';
 
+import heroBgImage from '../../../assets/images/hero/01.png';
 import img11 from '../../../assets/images/hero/11.png';
 import img04 from '../../../assets/images/hero/04.png';
 import img09 from '../../../assets/images/hero/09.svg';
@@ -13,8 +14,16 @@ import img06 from '../../../assets/images/hero/06.svg';
 
 
 export default function ProductHero() {
+
+  const bgStyle = {
+    backgroundImage: `url(${heroBgImage})`,
+    backgroundPosition: 'left top',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} style={bgStyle}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.content}>
