@@ -26,7 +26,6 @@ export default function ProblemSolution() {
           </h2>
 
           <div className={styles.cards}>
-              {/* Блок з проблемою */}
               <div className={styles.cardProblem} data-scroll>
                 <p className={styles.cardText}>
                   {PROBLEM_SOLUTION_CONTENT.problemText}
@@ -36,7 +35,6 @@ export default function ProblemSolution() {
                 </div>
               </div>
 
-              {/* Блок з рішенням */}
               <div className={styles.cardSolution} data-scroll>
                 <p className={styles.cardText}>
                   {PROBLEM_SOLUTION_CONTENT.solutionText}
@@ -48,7 +46,6 @@ export default function ProblemSolution() {
               </div>
             </div>
 
-          {/* Слайдер порівняння До/Після */}
           <div className={styles.comparison} data-scroll>
             <img
               src={afterImg}

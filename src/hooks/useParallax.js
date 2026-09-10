@@ -14,7 +14,6 @@ export function useParallax(selector = '[data-parallax]') {
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
 
-        // Перевірка видимості на екрані
         if (rect.top < windowHeight && rect.bottom > 0) {
           const speed = parseFloat(el.dataset.speed) || 0.2;
           const translateY = -scrollY * speed;
@@ -34,7 +33,7 @@ export function useParallax(selector = '[data-parallax]') {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    updateParallax(); // Початковий розрахунок
+    updateParallax();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);

@@ -4,7 +4,6 @@ export function useScrollObserver(selector = '[data-scroll]') {
   useEffect(() => {
     let observer;
 
-    // Чекаємо, поки React точно вставить усі DOM-вузли
     const timer = setTimeout(() => {
       observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -14,7 +13,7 @@ export function useScrollObserver(selector = '[data-scroll]') {
           }
         });
       }, {
-        threshold: 0.1, // Елемент вважається видимим, коли покажеться хоча б на 10%
+        threshold: 0.1,
       });
 
       const elements = document.querySelectorAll(selector);
