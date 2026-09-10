@@ -29,7 +29,6 @@
 // Секція Hero
 .hero {
   position: relative;
-  background: url('@img/hero/01.png') left top / cover no-repeat;
 
   @media (max-width: $breakpoint-mobile) {
     background-position: center bottom;
@@ -62,8 +61,8 @@
     align-self: start;
     position: relative;
     width: 51%;
-    backdrop-filter: blur(rem(10));
-    -webkit-backdrop-filter: blur(rem(10));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: rgb(255 255 255 / 20%);
     z-index: 5;
 
